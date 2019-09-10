@@ -1,16 +1,17 @@
 #!/bin/bash
 
-sudo apt-get update
+spudo apt-get update
 sudo apt-get install -y git
 sudo apt-get install -y python3-dev
 sudo apt-get install -y libmysqlclient-dev
 sudo apt-get install -y zlib1g-dev
-sudo pip3 install -y mysqlclient==1.3.10
+sudo apt-get install -y python3-pip
 sudo apt-get update
-pip3 install SQLAlchemy==1.2.5
-pip3 install Flask
-pip3 install pycodestyle
+sudo pip3 install mysqlclient==1.3.10
+sudo pip3 install SQLAlchemy==1.2.5
+sudo pip3 install Flask
+sudo pip3 install pycodestyle
 echo 'deb http://repo.mysql.com/apt/ubuntu/ trusty mysql-5.7-dmr' | sudo tee -a /etc/apt/sources.list
 sudo apt-get install mysql-server-5.7
-mysql --version
 sudo apt-get update
+mysql --version
